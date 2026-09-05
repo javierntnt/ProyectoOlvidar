@@ -20,6 +20,7 @@ class CreateTask(private val repository: TaskRepository) {
         timeMinute: Int? = null,
         habitFrequency: HabitFrequency? = null,
         habitTargetHours: Int? = null,
+        habitDoneHours: Int = 0,
         nowEpochMillis: Long = System.currentTimeMillis(),
     ): TaskWriteResult {
         val error = TaskValidator.validate(name, type, dayOfWeek, timeMinute, habitFrequency, habitTargetHours)
@@ -31,6 +32,7 @@ class CreateTask(private val repository: TaskRepository) {
                     timeMinute = timeMinute,
                     habitFrequency = habitFrequency,
                     habitTargetHours = habitTargetHours,
+                    habitDoneHours = habitDoneHours,
                     createdAt = nowEpochMillis,
                 ),
             )
