@@ -1,0 +1,19 @@
+# AI tooling local state
+.atl/
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+captures/
+.cxx/
+*.iml
+.idea/
+.kotlin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
