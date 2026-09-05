@@ -25,10 +25,11 @@
             </intent-filter>
         </activity>
 
-        <!--
-            AlarmReceiver and WorkManager worker declarations arrive with Phase 4
-            (notifications) in PR2. Permissions above already cover them.
-        -->
+        <receiver
+            android:name=".notifications.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- ReminderWorker needs no manifest declaration: WorkManager discovers it. -->
     </application>
 
 </manifest>

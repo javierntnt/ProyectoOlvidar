@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Debug-only manifest. Removes androidx.startup's InitializationProvider so
+    Robolectric/WorkManager tests can install the WorkManager TestDriver; the
+    application then initializes WorkManager manually in RemindMeApp.
+    Release builds keep the provider-based auto-init (no overlay present).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application tools:node="merge">
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove" />
+    </application>
+
+</manifest>

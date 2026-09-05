@@ -12,13 +12,17 @@ import kotlinx.coroutines.flow.Flow
  */
 class ReminderRepository(private val dao: ReminderLogDao) {
 
-    /** Record that a notification was delivered. */
-    suspend fun recordDelivery(kind: ReminderKind, taskId: Long?): Long =
-        dao.insert(ReminderLogEntity(kind = kind, taskId = taskId, at = System.currentTimeMillis()))
+    /** Record that a notification was delivered (stamped with [at], default now). */
+    suspend fun recordDelivery(kind: ReminderKind, taskId: Long?, at: Long = System.currentTimeMillis()): Long =
+        dao.insert(ReminderLogEntity(kind = kind, taskId = taskId, at = at))
 
     /** How many notifications of [kind] were delivered since [sinceEpochMillis] (daily-cap gate). */
     suspend fun countDeliveredSince(kind: ReminderKind, sinceEpochMillis: Long): Int =
         dao.countSince(kind, sinceEpochMillis)
+
+    /** Epoch millis of the most recent delivery of [kind], or null (cooldown gate). */
+    suspend fun latestDeliveryAt(kind: ReminderKind): Long? =
+        dao.latestAt(kind)
 
     /** Observe recent logs (for future settings screen / debug). */
     fun observeLogsSince(kind: ReminderKind, sinceEpochMillis: Long): Flow<List<ReminderLogEntity>> =

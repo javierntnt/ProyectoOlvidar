@@ -93,6 +93,8 @@ dependencies {
     // on the *unit test* classpath (they are not limited to instrumented tests).
     testImplementation(libs.androidx.test.ext.junit)
     testImplementation(libs.androidx.test.core)
+    // WorkManager TestDriver / TestListenableWorkerBuilder for worker unit tests
+    testImplementation(libs.androidx.work.testing)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

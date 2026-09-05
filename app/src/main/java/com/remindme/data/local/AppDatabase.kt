@@ -1,6 +1,7 @@
 package com.remindme.data.local
 
 import android.content.Context
+import androidx.annotation.VisibleForTesting
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -32,6 +33,19 @@ abstract class AppDatabase : RoomDatabase() {
             INSTANCE ?: synchronized(this) {
                 INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
             }
+
+        /**
+         * Drops the process-wide singleton. Robolectric gives each test method a
+         * fresh filesystem but keeps one class loader, so the stale instance would
+         * otherwise point at a deleted database file.
+         */
+        @VisibleForTesting
+        fun resetInstanceForTest() {
+            synchronized(this) {
+                INSTANCE?.close()
+                INSTANCE = null
+            }
+        }
 
         private fun buildDatabase(context: Context): AppDatabase =
             Room.databaseBuilder(

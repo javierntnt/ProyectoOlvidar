@@ -17,6 +17,10 @@ interface ReminderLogDao {
     @Query("SELECT COUNT(*) FROM reminder_log WHERE kind = :kind AND at >= :since")
     suspend fun countSince(kind: ReminderKind, since: Long): Int
 
+    /** Epoch millis of the most recent delivery of [kind], or null (for cooldown gate). */
+    @Query("SELECT MAX(at) FROM reminder_log WHERE kind = :kind")
+    suspend fun latestAt(kind: ReminderKind): Long?
+
     /** Observe recent logs (for debugging / future settings display). */
     @Query("SELECT * FROM reminder_log WHERE kind = :kind AND at >= :since ORDER BY at DESC")
     fun logsSince(kind: ReminderKind, since: Long): Flow<List<ReminderLogEntity>>

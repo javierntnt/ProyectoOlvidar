@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RemindMe</string>
+
+    <!-- Notification channels -->
+    <string name="channel_advance_alerts">Advance alerts</string>
+    <string name="channel_advance_alerts_description">Alerts for tasks with a fixed time</string>
+    <string name="channel_pending_reminders">Pending reminders</string>
+    <string name="channel_pending_reminders_description">Nudges for tasks still pending</string>
+
+    <!-- Notifications -->
+    <string name="notification_advance_alert_title">Task time</string>
+    <string name="notification_advance_alert_text">It\'s time for %1$s</string>
+    <string name="notification_pending_reminders_title">Tasks still pending</string>
+    <string name="notification_pending_reminders_text">%1$d pending task(s): %2$s</string>
 </resources>
