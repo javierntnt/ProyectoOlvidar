@@ -1,77 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RemindMe</string>
+    <!-- App name (user-facing, Spanish default; user can rename). -->
+    <string name="app_name">Mis Recordatorios</string>
 
-    <!-- Notification channels -->
-    <string name="channel_advance_alerts">Advance alerts</string>
-    <string name="channel_advance_alerts_description">Alerts for tasks with a fixed time</string>
-    <string name="channel_pending_reminders">Pending reminders</string>
-    <string name="channel_pending_reminders_description">Nudges for tasks still pending</string>
+    <!-- Notification channels (user-facing). -->
+    <string name="channel_advance_alerts">Avisos previos</string>
+    <string name="channel_advance_alerts_description">Avisos para tareas con hora fija</string>
+    <string name="channel_pending_reminders">Recordatorios pendientes</string>
+    <string name="channel_pending_reminders_description">Avisos para tareas todavía pendientes</string>
 
-    <!-- Notifications -->
-    <string name="notification_advance_alert_title">Task time</string>
-    <string name="notification_advance_alert_text">It\'s time for %1$s</string>
-    <string name="notification_pending_reminders_title">Tasks still pending</string>
-    <string name="notification_pending_reminders_text">%1$d pending task(s): %2$s</string>
+    <!-- Notifications (user-facing). -->
+    <string name="notification_advance_alert_title">Hora de la tarea</string>
+    <string name="notification_advance_alert_text">Es hora de %1$s</string>
+    <string name="notification_pending_reminders_title">Tareas pendientes</string>
+    <string name="notification_pending_reminders_text">Tienes %1$d tareas pendientes: %2$s</string>
 
-    <!-- Navigation -->
-    <string name="nav_week">Week</string>
-    <string name="nav_settings">Settings</string>
+    <!-- Navigation (bottom bar). -->
+    <string name="nav_week">Semana</string>
+    <string name="nav_settings">Ajustes</string>
 
-    <!-- Week view -->
+    <!-- Week view (user-facing). -->
     <string name="week_range">%1$s – %2$s</string>
-    <string name="week_today">Today</string>
-    <string name="week_anytime">Anytime this week</string>
-    <string name="week_no_tasks">No tasks</string>
-    <string name="week_previous">Previous week</string>
-    <string name="week_next">Next week</string>
-    <string name="week_today_button">Go to current week</string>
-    <string name="week_add_task">Add task</string>
-    <string name="week_delete_task">Delete task</string>
-    <string name="week_edit_task">Edit task</string>
+    <string name="week_today">Hoy</string>
+    <string name="week_anytime">En cualquier momento de la semana</string>
+    <string name="week_no_tasks">Sin tareas</string>
+    <string name="week_previous">Semana anterior</string>
+    <string name="week_next">Semana siguiente</string>
+    <string name="week_today_button">Ir a la semana actual</string>
+    <string name="week_add_task">Agregar tarea</string>
+    <string name="week_delete_task">Eliminar tarea</string>
+    <string name="week_edit_task">Editar tarea</string>
     <string name="week_habit_progress">%1$d/%2$d h</string>
-    <string name="week_delete_confirm_title">Delete task?</string>
-    <string name="week_delete_confirm_text">The task and its scheduled reminders will be removed.</string>
-    <string name="delete">Delete</string>
-    <string name="cancel">Cancel</string>
+    <string name="week_delete_confirm_title">¿Eliminar tarea?</string>
+    <string name="week_delete_confirm_text">La tarea y sus recordatorios programados se eliminarán.</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel">Cancelar</string>
 
-    <!-- Task form -->
-    <string name="task_form_new_title">New task</string>
-    <string name="task_form_edit_title">Edit task</string>
-    <string name="task_form_name">Task name</string>
-    <string name="task_form_type">Type</string>
-    <string name="task_form_fixed">Fixed</string>
+    <!-- Task form (user-facing). -->
+    <string name="task_form_new_title">Nueva tarea</string>
+    <string name="task_form_edit_title">Editar tarea</string>
+    <string name="task_form_name">Nombre de la tarea</string>
+    <string name="task_form_type">Tipo</string>
+    <string name="task_form_fixed">Fija</string>
     <string name="task_form_flexible">Flexible</string>
-    <string name="task_form_habit">Habit</string>
-    <string name="task_form_day">Day</string>
-    <string name="task_form_time">Time</string>
-    <string name="task_form_pick_time">Pick time</string>
-    <string name="task_form_frequency">Frequency</string>
-    <string name="task_form_daily">Daily</string>
-    <string name="task_form_weekly">Weekly</string>
-    <string name="task_form_target_hours">Target hours</string>
-    <string name="task_form_done_hours">Hours done</string>
-    <string name="task_form_save">Save</string>
-    <string name="error_empty_name">Task name is required</string>
-    <string name="error_invalid_day">Pick a day</string>
-    <string name="error_invalid_time">Pick a time</string>
-    <string name="error_missing_habit_frequency">Pick a frequency</string>
-    <string name="error_missing_habit_target">Set target hours</string>
-    <string name="error_invalid_habit_target">Target hours must be positive</string>
-    <string name="error_task_not_found">Task no longer exists</string>
+    <string name="task_form_habit">Hábito</string>
+    <string name="task_form_day">Día</string>
+    <string name="task_form_time">Hora</string>
+    <string name="task_form_pick_time">Elegir hora</string>
+    <string name="task_form_frequency">Frecuencia</string>
+    <string name="task_form_daily">Diaria</string>
+    <string name="task_form_weekly">Semanal</string>
+    <string name="task_form_target_hours">Horas objetivo</string>
+    <string name="task_form_done_hours">Horas cumplidas</string>
+    <string name="task_form_save">Guardar</string>
+    <string name="error_empty_name">El nombre de la tarea es obligatorio</string>
+    <string name="error_invalid_day">Elige un día</string>
+    <string name="error_invalid_time">Elige una hora</string>
+    <string name="error_missing_habit_frequency">Elige una frecuencia</string>
+    <string name="error_missing_habit_target">Establece las horas objetivo</string>
+    <string name="error_invalid_habit_target">Las horas objetivo deben ser positivas</string>
+    <string name="error_task_not_found">La tarea ya no existe</string>
 
-    <!-- Settings -->
-    <string name="settings_title">Settings</string>
-    <string name="settings_advance_alerts">Advance alerts</string>
-    <string name="settings_lead_time">Lead time</string>
-    <string name="settings_lead_time_value">%1$d min before</string>
-    <string name="settings_periodic">Periodic reminders</string>
-    <string name="settings_interval">Interval</string>
-    <string name="settings_daily_cap">Daily cap</string>
-    <string name="settings_cooldown">Cooldown</string>
-    <string name="settings_quiet_hours">Quiet hours</string>
-    <string name="settings_quiet_start">Start %1$s</string>
-    <string name="settings_quiet_end">End %1$s</string>
-    <string name="ok">OK</string>
-    <string name="back">Back</string>
+    <!-- Settings (user-facing). -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_advance_alerts">Avisos previos</string>
+    <string name="settings_lead_time">Antelación</string>
+    <string name="settings_lead_time_value">%1$d min antes</string>
+    <string name="settings_periodic">Recordatorios periódicos</string>
+    <string name="settings_interval">Intervalo</string>
+    <string name="settings_daily_cap">Límite diario</string>
+    <string name="settings_cooldown">Espera</string>
+    <string name="settings_quiet_hours">Horas de silencio</string>
+    <string name="settings_quiet_start">Inicio %1$s</string>
+    <string name="settings_quiet_end">Fin %1$s</string>
+    <string name="ok">Aceptar</string>
+    <string name="back">Atrás</string>
 </resources>

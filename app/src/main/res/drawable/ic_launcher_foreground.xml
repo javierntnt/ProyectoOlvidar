@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher foreground (108dp adaptive viewport): teal circle with a white
+     check mark, matching the Compose primary (#006B5F) / on-primary palette.
+     Artwork stays inside the 66dp safe zone (circle radius 30 centered at 54,54). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Teal circle (Primary). -->
+    <path
+        android:fillColor="#006B5F"
+        android:pathData="M54,24a30,30 0 1,0 0,60a30,30 0 1,0 0,-60z" />
+    <!-- White check mark (OnPrimary), round caps/joins for a friendly look. -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M38,54 L50,66 L70,41" />
+</vector>

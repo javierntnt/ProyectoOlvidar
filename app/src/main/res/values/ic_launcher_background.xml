@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher icon background: light mint, matches Compose PrimaryContainer (#8AF8E4). -->
+    <color name="ic_launcher_background">#8AF8E4</color>
+</resources>

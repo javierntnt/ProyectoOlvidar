@@ -77,7 +77,7 @@ class WeekViewContentTest {
         composeTestRule.onNodeWithText("Exercise").assertIsDisplayed()
         composeTestRule.onNodeWithText("1/2 h").assertIsDisplayed()
         composeTestRule.onNodeWithText("Read book").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Today").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Hoy").assertIsDisplayed()
     }
 
     @Test
@@ -104,7 +104,7 @@ class WeekViewContentTest {
             )
         }
 
-        composeTestRule.onNodeWithText("Task name is required").assertIsDisplayed()
+        composeTestRule.onNodeWithText("El nombre de la tarea es obligatorio").assertIsDisplayed()
     }
 
     @Test
@@ -132,9 +132,9 @@ class WeekViewContentTest {
             )
         }
 
-        composeTestRule.onNodeWithText("Target hours").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Hours done").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Daily").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Weekly").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Horas objetivo").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Horas cumplidas").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Diaria").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Semanal").assertIsDisplayed()
     }
 }
