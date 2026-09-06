@@ -1,4 +1,5 @@
 # Configuración de Cloudflare Pages para el Worker de recordatorios.
 # El directorio "worker" contiene _worker.js (modo avanzado de Pages),
 # que se ejecuta como un Worker en el edge.
+name = "proyectoolvidar"
 pages_build_output_dir = "worker"
