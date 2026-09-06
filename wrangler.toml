@@ -1,5 +1,5 @@
-# Configuración de Cloudflare Pages para el Worker de recordatorios.
-# El directorio "worker" contiene _worker.js (modo avanzado de Pages),
-# que se ejecuta como un Worker en el edge.
+# Cloudflare Worker: WhatsApp -> Firestore para Mis Recordatorios
+# Desplegado como Worker (proyecto Workers, no Pages).
 name = "proyectoolvidar"
-pages_build_output_dir = "worker"
+main = "worker/_worker.js"
+compatibility_date = "2026-09-06"
