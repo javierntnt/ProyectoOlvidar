@@ -1,0 +1,6 @@
+{
+  "name": "worker-recordatorios",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker: WhatsApp -> Firestore para Mis Recordatorios"
+}
